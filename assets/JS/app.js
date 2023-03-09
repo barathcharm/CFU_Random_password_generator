@@ -70,16 +70,6 @@ generate[0].addEventListener("click",e=>{
         result.value = res; 
     }
 
-    if (upp_check.checked == true && low_check.checked== true && num_check.checked==false && symbol_check.checked == false){
-        let  charlength = document.getElementById('length').value
-        let upp_low = uppercase + lowercase
-        for(let i =0;i<charlength;i++){
-            res+= upp_low.charAt(Math.random()*upp_low.length)
-        }
-        console.log(res);
-        result.value = res;
-    }
-
     if (upp_check.checked == false && low_check.checked== true && num_check.checked==false && symbol_check.checked == false){
         let  charlength = document.getElementById('length').value
         
@@ -170,6 +160,16 @@ generate[0].addEventListener("click",e=>{
         let upp_num_sym = num+sym+uppercase
         for(let i =0;i<charlength;i++){
             res+= upp_num_sym.charAt(Math.random()*upp_num_sym.length)
+        }
+        console.log(res);
+        result.value = res;
+    }
+
+    if (upp_check.checked == true && low_check.checked== true && num_check.checked==false && symbol_check.checked == true){
+        let  charlength = document.getElementById('length').value
+        let upp_low_sym = lowercase+sym+uppercase
+        for(let i =0;i<charlength;i++){
+            res+= upp_low_sym.charAt(Math.random()*upp_low_sym.length)
         }
         console.log(res);
         result.value = res;
