@@ -156,6 +156,27 @@ generate[0].addEventListener("click",e=>{
         console.log(res);
         result.value = res;
     }
+    if (upp_check.checked == false && low_check.checked== true && num_check.checked==true && symbol_check.checked == true){
+        let  charlength = document.getElementById('length').value
+        let low_num_sym = num+sym+lowercase
+        for(let i =0;i<charlength;i++){
+            res+= low_num_sym.charAt(Math.random()*low_num_sym.length)
+        }
+        console.log(res);
+        result.value = res;
+    }
+    if (upp_check.checked == true && low_check.checked== false && num_check.checked==true && symbol_check.checked == true){
+        let  charlength = document.getElementById('length').value
+        let upp_num_sym = num+sym+uppercase
+        for(let i =0;i<charlength;i++){
+            res+= upp_num_sym.charAt(Math.random()*upp_num_sym.length)
+        }
+        console.log(res);
+        result.value = res;
+    }
+
+
+
 
 
 
